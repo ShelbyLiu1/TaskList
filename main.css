@@ -1,0 +1,222 @@
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+    /*--lightGreen: #46A635;*/
+	--lightGreen: #8f5f24;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+	/*background-color: #47823c;*/
+	/*background-color: #299175;*/
+	background-color: #4d9c1f;
+} 
+    
+
+
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1{ 
+	font-size: 2.5rem;
+	font-weight: 400;
+    font-family: 'Pixelify Sans', sans-serif;
+	color: var(--light);
+	margin-bottom: 1rem;
+}
+
+#new-task-form {
+	display: flex;;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-task-input {
+	flex: 1 1 0%;
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: var(--light);
+	font-size: 1.5rem;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+#new-task-input::placeholder {
+	color: var(--grey);
+}
+
+#new-task-submit {
+	color: var(--light);
+	font-size: 1.5rem;
+	font-weight: 700;
+	background-image: var(--light);
+	cursor: pointer;
+	transition: 0.4s;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+#new-task-submit:hover {
+	opacity: 0.8;
+}
+
+#new-task-submit:active {
+	opacity: 0.6;
+}
+
+
+
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.task-list {
+	padding: 1rem;
+}
+
+.task-list h2 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 1rem;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+#tasks .task .content {
+    flex: 1 1 0%;
+}
+#tasks .task .content .text {
+    color: var(--light);
+    font-size: 1.5rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s
+    
+}
+
+#tasks .task .content .text:not(:read-only){
+    color: var(--pink);
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.task .actions button:hover {
+    opacity: 0.8;
+}
+
+.task .actions button:active {
+    opacity: 0.6;
+}
+
+.task .actions .edit {
+    background-image: var(--pink);
+    color: var(--light);
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.task .actions .delete {
+    color: crimson;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+#tasks .task .checkbox {
+    appearance: none;
+	background-color: white;
+	/*flex: 1 1 0%;*/
+	margin-top: 5px;
+	width: 20px;
+	height: 20px;
+	margin-right: 1rem;
+	
+}
+
+#tasks .task.complete {
+	opacity: 0.75;
+}
+
+.checkMark {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	/*display: none;*/
+
+}
+
+#tasks .task.complete .checkbox {
+  background-image: url('Images/checkMark.png');
+  background-size: cover;
+}
+
+#tasks .task.complete input[type="text"] {
+	text-decoration: line-through;
+}
+
+
+
+.pixelGuy {
+    margin-top: 35px;
+    margin-left: -150px;
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.speechBubble {
+	position: absolute;
+    max-width: 350%;
+    max-height: 350%;
+	margin-left: -150px;
+	margin-top: 30px;
+}
+
+
